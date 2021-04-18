@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Image.urls import router as upload_router
+from imageExplorer.urls import router as upload_router
 from django.conf.urls import url, include
 
 urlpatterns = [
