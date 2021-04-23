@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import RedirectView
 from imageExplorer.urls import router as upload_router
 from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api/', include(upload_router.urls)),]
+    url(r'^api/', include(upload_router.urls)),
+    url('', RedirectView.as_view(url='/static/index.html'))
+]
