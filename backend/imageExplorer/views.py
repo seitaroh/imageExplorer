@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from .models import Image
 from .serializer import ImageSerializer
 
-UPLOAD_DIR = 'static/uploaded_photo/'
 
 class ImageViewSet(viewsets.ModelViewSet):
     queryset = Image.objects.all()
